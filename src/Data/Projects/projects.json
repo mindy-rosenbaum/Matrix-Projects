@@ -1,0 +1,322 @@
+[
+    {
+        "id": "1",
+        "name": "SmartHome Control System",
+        "customerCompany": "HomeTech Solutions",
+        "date": "2023-08-01",
+        "description": "Develop an advanced SmartHome Control System that utilizes IoT devices, wireless protocols, and edge computing. The system will allow homeowners to remotely manage and monitor their smart appliances, lights, and security devices. Employing MQTT messaging, Zigbee and Z-Wave technologies, and MQTT brokers for efficient communication.",
+        "teams": [
+            "Embedded Systems",
+            "IoT Development",
+            "Wireless Protocols",
+            "Edge Computing"
+        ],
+        "status": "ACTIVE",
+        "isStartUp": false,
+        "isEmbeeddedSW": true
+    },
+    {
+        "id": "2",
+        "name": "E-commerce Platform Upgrade",
+        "customerCompany": "eMarket Corp",
+        "date": "2023-07-15",
+        "description": "Undertake a comprehensive upgrade of the e-commerce platform, implementing microservices architecture, Kubernetes orchestration, and serverless computing. Enhance customer experience with GraphQL API, Elasticsearch search, and machine learning-driven recommendation systems. Optimize backend performance through containerization and load balancing.",
+        "teams": [
+            "Web Development",
+            "Microservices Architecture",
+            "Kubernetes",
+            "Serverless Computing"
+        ],
+        "status": "STARTED",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "3",
+        "name": "Health Monitoring App",
+        "customerCompany": "HealthTech Innovations",
+        "date": "2023-06-10",
+        "description": "Create a cutting-edge mobile health monitoring app that employs wearable sensors, real-time data streaming, and AI-powered anomaly detection. Utilize convolutional neural networks for image recognition of medical scans and natural language processing for patient-doctor communication. Implement FHIR standards for seamless integration with electronic health records (EHR).",
+        "teams": [
+            "Mobile App Development",
+            "AI and Machine Learning",
+            "Wearable Sensors",
+            "Health Informatics"
+        ],
+        "status": "PLANNING",
+        "isStartUp": true,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "4",
+        "name": "Autonomous Drone Navigation",
+        "customerCompany": "AeroDrone Systems",
+        "date": "2023-08-20",
+        "description": "Pioneer autonomous drone navigation by combining SLAM algorithms, LiDAR technology, and path planning strategies. Develop a fault-tolerant system using redundancy and obstacle avoidance techniques. Enable swarm intelligence for collaborative drone missions. Implement ROS middleware for modular and efficient software development.",
+        "teams": [
+            "Robotics",
+            "Computer Vision",
+            "SLAM",
+            "LiDAR Technology"
+        ],
+        "status": "ACTIVE",
+        "isStartUp": false,
+        "isEmbeeddedSW": true
+    },
+    {
+        "id": "5",
+        "name": "Financial Analytics Dashboard",
+        "customerCompany": "FinAnalytics Ltd.",
+        "date": "2023-07-01",
+        "description": "Craft a comprehensive financial analytics dashboard for investment professionals, integrating real-time market data feeds, predictive analytics models, and interactive data visualization. Leverage blockchain technology for secure data storage and verifiable transactions. Implement neural networks for stock price forecasting.",
+        "teams": [
+            "Data Science",
+            "Blockchain",
+            "Predictive Analytics",
+            "Data Visualization"
+        ],
+        "status": "FINISHED",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "6",
+        "name": "Cybersecurity Suite",
+        "customerCompany": "SecureTech Solutions",
+        "date": "2023-06-25",
+        "description": "Engineer an all-encompassing cybersecurity suite with intrusion detection systems, threat intelligence feeds, and adaptive access controls. Implement zero-trust architecture, multi-factor authentication, and end-to-end encryption. Employ machine learning algorithms for anomaly detection and behavioral analysis.",
+        "teams": [
+            "Cybersecurity",
+            "Machine Learning",
+            "Network Security",
+            "Threat Intelligence"
+        ],
+        "status": "ACTIVE",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "7",
+        "name": "Autonomous Drone Delivery",
+        "customerCompany": "SkyTech Innovations",
+        "date": "2023-08-18",
+        "description": "Develop an autonomous drone delivery system for efficient and secure package transportation. Implement computer vision, obstacle detection, and route optimization algorithms. Integrate with weather data and real-time traffic updates for seamless deliveries in urban and rural areas.",
+        "teams": [
+            "Drones",
+            "Computer Vision",
+            "Route Optimization",
+            "IoT Integration"
+        ],
+        "status": "ACTIVE",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "8",
+        "name": "Financial Fraud Detection",
+        "customerCompany": "SecureFinance Solutions",
+        "date": "2023-07-30",
+        "description": "Build an advanced machine learning system for detecting financial fraud and anomalies in real-time transactions. Utilize ensemble methods, anomaly detection, and behavior analysis for accurate fraud identification. Collaborate with financial institutions to adapt the model to evolving threats.",
+        "teams": [
+            "Machine Learning",
+            "Fraud Detection",
+            "Anomaly Detection",
+            "Financial Security"
+        ],
+        "status": "STARTED",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "9",
+        "name": "Space Mission Planning",
+        "customerCompany": "Galactic Explorations",
+        "date": "2023-06-25",
+        "description": "Design software for mission planning and trajectory optimization of spacecraft. Utilize orbital mechanics, propulsion systems, and interplanetary navigation algorithms. Collaborate with space agencies to ensure safe and accurate mission execution.",
+        "teams": [
+            "Space Exploration",
+            "Orbital Mechanics",
+            "Navigation Algorithms",
+            "Propulsion Systems"
+        ],
+        "status": "FINISHED",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "10",
+        "name": "Healthcare IoT Platform",
+        "customerCompany": "MedTech Innovations",
+        "date": "2023-08-12",
+        "description": "Develop an integrated IoT platform for remote patient monitoring and personalized healthcare. Utilize wearable devices, sensors, and cloud infrastructure for data collection and analysis. Implement machine learning for predictive health insights and early disease detection.",
+        "teams": [
+            "IoT",
+            "Healthcare",
+            "Machine Learning",
+            "Remote Monitoring"
+        ],
+        "status": "PLANNING",
+        "isStartUp": true,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "11",
+        "name": "Automated Agricultural Management",
+        "customerCompany": "AgriTech Solutions",
+        "date": "2023-07-10",
+        "description": "Create a smart agricultural management system using IoT sensors, drones, and satellite imagery. Monitor crop health, soil conditions, and irrigation remotely. Implement data-driven decision-making for optimal yield, resource efficiency, and sustainable farming practices.",
+        "teams": [
+            "Agriculture",
+            "IoT",
+            "Precision Farming",
+            "Data Analytics"
+        ],
+        "status": "ACTIVE",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "12",
+        "name": "Smart City Infrastructure",
+        "customerCompany": "CityTech Innovations",
+        "date": "2023-08-05",
+        "description": "Design a comprehensive smart city infrastructure using IoT devices, sensors, and data analytics. Implement solutions for smart traffic management, waste collection, energy optimization, and public safety. Collaborate with urban planners and local governments for sustainable city development.",
+        "teams": [
+            "Smart Cities",
+            "IoT",
+            "Urban Planning",
+            "Data Analytics"
+        ],
+        "status": "STARTED",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "13",
+        "name": "Virtual Reality Training Platform",
+        "customerCompany": "VR EduTech Solutions",
+        "date": "2023-06-20",
+        "description": "Develop a virtual reality training platform for education and professional skills development. Create realistic immersive environments for medical, engineering, and vocational training. Integrate interactive simulations and real-time feedback for enhanced learning experiences.",
+        "teams": [
+            "Virtual Reality",
+            "Education",
+            "Simulations",
+            "Interactive Learning"
+        ],
+        "status": "FINISHED",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "14",
+        "name": "E-commerce Recommendation Engine",
+        "customerCompany": "ShopTech Innovations",
+        "date": "2023-07-25",
+        "description": "Build a personalized recommendation engine for e-commerce platforms using collaborative filtering, content-based analysis, and machine learning algorithms. Enhance user engagement by suggesting relevant products based on browsing history, preferences, and purchase behavior.",
+        "teams": [
+            "E-commerce",
+            "Recommendation Systems",
+            "Machine Learning",
+            "User Engagement"
+        ],
+        "status": "ACTIVE",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "15",
+        "name": "Smart Home Automation",
+        "customerCompany": "HomeTech Solutions",
+        "date": "2023-08-10",
+        "description": "Create a comprehensive smart home automation system integrating IoT devices, voice assistants, and mobile apps. Implement features for lighting control, security monitoring, temperature regulation, and energy optimization. Offer seamless user experience and remote control.",
+        "teams": [
+            "Smart Home",
+            "IoT",
+            "Home Automation",
+            "User Experience"
+        ],
+        "status": "PLANNING",
+        "isStartUp": true,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "16",
+        "name": "Climate Prediction Model",
+        "customerCompany": "EcoClimate Research",
+        "date": "2023-08-10",
+        "description": "Develop a complex climate prediction model using numerical simulations, global climate data, and deep learning algorithms. Utilize supercomputers for high-performance computing and optimize the model using parallel processing. Predict extreme weather events and long-term climate trends for better preparedness and policy-making.",
+        "teams": [
+            "Climate Science",
+            "Numerical Simulations",
+            "Deep Learning",
+            "High-Performance Computing"
+        ],
+        "status": "ACTIVE",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "17",
+        "name": "Blockchain-based Supply Chain",
+        "customerCompany": "SupplyTech Innovations",
+        "date": "2023-07-20",
+        "description": "Design a blockchain-based supply chain solution that ensures transparency, traceability, and authenticity of products. Implement smart contracts for automated verification and auditing of transactions. Utilize QR code scanning and NFC technology for real-time product tracking from source to consumer.",
+        "teams": [
+            "Blockchain",
+            "Supply Chain Management",
+            "Smart Contracts",
+            "IoT Integration"
+        ],
+        "status": "STARTED",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "18",
+        "name": "Language Understanding AI",
+        "customerCompany": "LinguisticsTech Labs",
+        "date": "2023-06-15",
+        "description": "Develop a language understanding AI system capable of context-aware natural language processing. Utilize transformer models for sentiment analysis, entity recognition, and language generation. Implement transfer learning to adapt to specific industries and domains for enhanced accuracy and relevance.",
+        "teams": [
+            "AI Research",
+            "Natural Language Processing",
+            "Transfer Learning",
+            "Sentiment Analysis"
+        ],
+        "status": "FINISHED",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "19",
+        "name": "Quantum Computing Algorithms",
+        "customerCompany": "QuantumTech Innovations",
+        "date": "2023-08-05",
+        "description": "Explore the possibilities of quantum computing by developing algorithms for complex optimization, cryptography, and quantum simulations. Utilize quantum gates and qubits for parallel processing and tackle NP-hard problems with quantum annealing techniques. Collaborate with leading quantum hardware providers for real-world testing.",
+        "teams": [
+            "Quantum Computing",
+            "Quantum Algorithms",
+            "Quantum Annealing",
+            "Cryptography"
+        ],
+        "status": "PLANNING",
+        "isStartUp": true,
+        "isEmbeeddedSW": false
+    },
+    {
+        "id": "20",
+        "name": "Augmented Reality Medical Training",
+        "customerCompany": "MedAR Solutions",
+        "date": "2023-07-15",
+        "description": "Create an augmented reality platform for medical professionals to practice surgeries and procedures in a realistic virtual environment. Utilize gesture recognition, haptic feedback, and anatomically accurate simulations. Collaborate with medical experts to ensure accurate representation and learning outcomes.",
+        "teams": [
+            "Augmented Reality",
+            "Medical Simulation",
+            "Human-Computer Interaction",
+            "Medical Expertise"
+        ],
+        "status": "ACTIVE",
+        "isStartUp": false,
+        "isEmbeeddedSW": false
+    }
+]
