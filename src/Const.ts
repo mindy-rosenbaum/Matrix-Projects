@@ -13,8 +13,7 @@ export const Strings = {
         USR_LOGGED_IN_MASSAGE: (userName: string): string => { return `User ${userName} is logged in.` },
         WELLCOME_MASSAGE: (userName?: string): string => { return `Wellcom ${userName || ''} To Matrix Projects ` },
         SELECTED_PROJECT: (projectName: string): string => { return `Project ${projectName} is selected to view` }
-    }
-    ,
+    },
     localStorageName: {
         LOGGED_IN_USER: 'loggedInUser'
     },
@@ -25,5 +24,4 @@ export const Strings = {
     titles: {
         MATRIX_PROJECTS: 'Matrix Projects'
     }
-
 }

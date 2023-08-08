@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Typography, Container, Box } from '@mui/material';
-import { useActiveUserAuth } from "./AuthContext";
-import { User, UserLoginInfo } from '../Types/User';
-import AlertMessage from "./Shared/AlertMessage";
-import { AlertSeverity, LogStatus } from "../Types/enums";
+
+import { useActiveUserAuth } from './AuthContext';
+import AlertMessage from './Shared/AlertMessage';
+import { AlertSeverity, LogStatus } from '../Types/enums';
 import { UsersService } from '../Services/UsersService';
+import { CommonService } from '../Services/CommonService';
+import { User, UserLoginInfo } from '../Types/User';
 import { Strings } from '../Const';
-import { CommonService } from "../Services/CommonService";
-
-
 
 const Login = (): JSX.Element => {
     const [formData, setFormData] = useState<UserLoginInfo>({
@@ -21,6 +20,9 @@ const Login = (): JSX.Element => {
         name: '',
         password: '',
     });
+
+    //todo- alert data objecct that contains all data of alert.
+    //interface
     const [openAlert, setOpenAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
     const [alertSeverity, setAlertSeverity] = useState<AlertSeverity>(
@@ -28,7 +30,6 @@ const Login = (): JSX.Element => {
     );
 
     const navigate = useNavigate();
-
 
     useEffect(() => {
         const userString = localStorage.getItem(Strings.localStorageName.LOGGED_IN_USER);
@@ -67,11 +68,9 @@ const Login = (): JSX.Element => {
         }
     };
 
-
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Validate the form fields
         const newErrors = validateForm(formData);
         setErrors(newErrors);
 
@@ -79,14 +78,11 @@ const Login = (): JSX.Element => {
 
             const existedUser = UsersService.getUserIfExist(formData)
             if (existedUser) {
-                // Display success alert
                 setAlertSeverity(AlertSeverity.SUCCESS);
                 setAlertMessage(Strings.massages.LOG_IN_SUCCESSFULL);
                 setOpenAlert(prevOpenAlert => !prevOpenAlert);//to true
-                //set the active user in user context.
                 login(existedUser);
             } else {
-                // Display error alert
                 setAlertSeverity(AlertSeverity.ERROR);
                 setAlertMessage(Strings.massages.INVALID_USER_NAME_OR_PASSWORD);
                 setOpenAlert(prevOpenAlert => !prevOpenAlert);//to true
@@ -104,7 +100,7 @@ const Login = (): JSX.Element => {
             } else if (value.length < 4) {
                 currentErrors.name = Strings.massages.USER_NAME_MUST_BE_LONG;
             } else {
-                currentErrors.name = ''; // Reset the error if the input is valid
+                currentErrors.name = '';
             }
         }
 
@@ -114,7 +110,7 @@ const Login = (): JSX.Element => {
             } else if (value.length < 6) {
                 currentErrors.password = Strings.massages.PASSWORD_MUST_BE_LONG;
             } else {
-                currentErrors.password = ''; // Reset the error if the input is valid
+                currentErrors.password = '';
             }
         }
 
@@ -142,7 +138,6 @@ const Login = (): JSX.Element => {
                         error={Boolean(errors.name)}
                         helperText={errors.name || ' '}
                     />
-
                     <TextField
                         fullWidth
                         label="Password"
@@ -165,7 +160,6 @@ const Login = (): JSX.Element => {
                 message={alertMessage}
                 onClose={handleCloseAlert}
             />
-
         </Container>
     );
 }

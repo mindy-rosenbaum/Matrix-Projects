@@ -7,10 +7,12 @@ import { Strings } from '../Const';
 interface projectProps { project: Project }
 
 const ProjectCard = (project: projectProps) => {
+    
     const selectedProject: Project = project.project;
     if (selectedProject) {
         CommonService.log(Strings.massages.SELECTED_PROJECT(selectedProject.name), LogStatus.info,)
     }
+
     return (
         <Card elevation={3} sx={{ marginBottom: '20px' }}>
             <CardContent>

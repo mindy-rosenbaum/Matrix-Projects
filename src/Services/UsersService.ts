@@ -1,5 +1,5 @@
 
-import { User, UserLoginInfo } from "../Types/User";
+import { User, UserLoginInfo } from '../Types/User';
 import users from '../Data/Users/users.json';
 
 const getAallUsers = (): User[] => {
@@ -13,7 +13,6 @@ const getAallUsers = (): User[] => {
 
 const getUserIfExist = (userInfo: UserLoginInfo): User | undefined => {
     // Check if user exists in the data file
-    const allUsers = getAallUsers();
     const existedUser: User | undefined = users.find(
         (user) => user.name === userInfo.name && user.password === userInfo.password
     );
@@ -22,3 +21,4 @@ const getUserIfExist = (userInfo: UserLoginInfo): User | undefined => {
 export const UsersService = {
     getAallUsers, getUserIfExist
 }
+

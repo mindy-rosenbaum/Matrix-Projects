@@ -1,9 +1,10 @@
-import React from 'react';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+
 import { useActiveUserAuth } from '../AuthContext';
-import '../../index.css';
+
 import { Strings } from '../../Const';
+import '../../index.css';
 
 const Header = () => {
     const navigate = useNavigate();
@@ -30,3 +31,4 @@ const Header = () => {
 };
 
 export default Header;
+

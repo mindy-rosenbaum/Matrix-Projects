@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Login from './Components/Login';
+
+import Login from '../Login';
+import MainScreen from '../MainScreen';
+import { useActiveUserAuth } from '../AuthContext';
+import { User, UserLoginInfo } from '../../Types/User';
+import { UsersService } from '../../Services/UsersService';
+
 import './App.css';
-import MainScreen from './Components/MainScreen';
-import { useActiveUserAuth } from './Components/AuthContext';
-import { User, UserLoginInfo } from './Types/User';
-import { UsersService } from './Services/UsersService';
-import ProtectedRoute from './Components/ProtectedRoute';
 
 const App: React.FC = () => {
 
@@ -29,11 +30,6 @@ const App: React.FC = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/mainScreen" element={isLoggedIn ? <MainScreen /> : <Navigate to="/" />} />
       </Routes>
-      {/* <Routes>
-        <Route path="/" element={<ProtectedRoute path='/mainScreen'><Login /></ProtectedRoute>} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/mainScreen" element={<ProtectedRoute path='/'><MainScreen /></ProtectedRoute>} />
-      </Routes> */}
     </Router>
   );
 }

@@ -1,11 +1,13 @@
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
-import { ColDef, ColumnApi, GridApi, GridOptions } from 'ag-grid-community';
-import { ProjectHeader } from '../../Types/Project';
-import { Strings } from '../../Const';
+import { ColDef, ColumnApi, GridApi } from 'ag-grid-community';
+
 import { CommonService } from '../../Services/CommonService';
 import { LogStatus } from '../../Types/enums';
+import { Strings } from '../../Const';
+import { ProjectHeader } from '../../Types/Project';
+
 
 export interface GridProps {
     rows: ProjectHeader[];

@@ -1,9 +1,12 @@
 import React, { useState, useContext } from 'react';
-import { ActiveUserInfo, User } from '../Types/User';
+
 import AuthContext, { UserProvider } from '../Cotext/UserContext';
-import { Strings } from '../Const';
-import { LogStatus } from '../Types/enums';
 import { CommonService } from '../Services/CommonService';
+
+import { LogStatus } from '../Types/enums';
+import { ActiveUserInfo, User } from '../Types/User';
+import { Strings } from '../Const';
+
 export interface AuthProviderProps {
     children: React.ReactNode;
 }

@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
-import Grid from './Shared/Grid';
-import { Button, Dialog, DialogContent, DialogTitle } from '@mui/material';
-import { useActiveUserAuth } from './AuthContext';
-import { Project, ProjectHeader } from '../Types/Project';
-import { ProjectsService } from '../Services/ProjectsService';
-import { Status } from '../Types/enums';
 import styled from 'styled-components';
-import ProjectCard from './ProjectCard';
 import { ColDef } from 'ag-grid-community';
+import { Button, Dialog, DialogContent, DialogTitle } from '@mui/material';
+
+import { ProjectsService } from '../Services/ProjectsService';
+import ProjectCard from './ProjectCard';
 import Header from './Shared/Header';
+import Grid from './Shared/Grid';
+
 import { Strings } from '../Const';
+import { Status } from '../Types/enums';
+import { Project, ProjectHeader } from '../Types/Project';
+
+
+
 
 const MainScreen: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
