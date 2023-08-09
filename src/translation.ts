@@ -1,9 +1,9 @@
-export const Strings = {
+export const Translation = {
     massages: {
         GRID_READY: "The Grid is ready",
         INVALID_USER_NAME_OR_PASSWORD: 'Invalid username or password. Please try again.',
         NO_USER_LOGGED_IN: "No user is logged in.",
-        LOG_IN_SUCCESSFULL: 'Login successful',
+        LOG_IN_SUCCESSFULL: 'Login successfull',
         USER_NAME_REQUIRED: 'Username is required',
         USER_NAME_MUST_BE_LONG: 'Username must be at least 4 characters long',
         PASSWORD_REQUIRED: 'Password is required',
@@ -14,14 +14,23 @@ export const Strings = {
         WELLCOME_MASSAGE: (userName?: string): string => { return `Wellcom ${userName || ''} To Matrix Projects ` },
         SELECTED_PROJECT: (projectName: string): string => { return `Project ${projectName} is selected to view` }
     },
-    localStorageName: {
-        LOGGED_IN_USER: 'loggedInUser'
-    },
     fieldNames: {
         PASSWORD: 'password',
         NAME: 'name'
     },
     titles: {
-        MATRIX_PROJECTS: 'Matrix Projects'
+        MATRIX_PROJECTS: 'Matrix Projects',
+        PROJECT_DETAILS: "Project Details",
+        LOGOUT: "Logout",
+        LOGIN: "Login",
+        CLOSE: "Close",
+        TEAMS: "Teams:",
+        EMBEDDED: "Embedded SW:",
+        START_UP: "Start-Up:",
+        STATUS: "Status:",
+        DATE: "Date:",
+        CUSTOMER: "Customer:",
+        YES: "Yes",
+        NO: "No"
     }
 }

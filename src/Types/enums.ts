@@ -5,10 +5,11 @@ export enum Status {
     ACTIVE,
     TESTING
 }
-export const enum LogStatus {
-    warning,
-    info,
-    error
+
+export enum LogStatus {
+    WARNING,
+    INFO,
+    ERROR
 }
 
 export enum AlertSeverity {
@@ -17,6 +18,7 @@ export enum AlertSeverity {
     WARNING = 'warning',
     INFO = 'info',
 }
+
 export enum Technology {
     C_SHARP = "C#",
     PYTHON = "Python",
@@ -56,3 +58,19 @@ export enum Technology {
     UI_UX_DESIGN = "UI/UX Design",
     AGILE_METHODOLOGY = "Agile Methodology"
 }
+
+export const variantMap: Record<string, 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle1' | 'subtitle2' | 'body1' | 'body2' | 'button' | 'caption' | 'overline'> = {
+    'h1': 'h1',
+    'h2': 'h2',
+    'h3': 'h3',
+    'h4': 'h4',
+    'h5': 'h5',
+    'h6': 'h6',
+    'subtitle1': 'subtitle1',
+    'subtitle2': 'subtitle2',
+    'body1': 'body1',
+    'body2': 'body2',
+    'button': 'button',
+    'caption': 'caption',
+    'overline': 'overline',
+};

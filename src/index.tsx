@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import App from './Components/app/App';
-import { AuthProvider } from '../src/Components/AuthContext';
+import App from './components/app/app';
+import { AuthProvider } from './components/auth-context';
 
 import './index.css';
-
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

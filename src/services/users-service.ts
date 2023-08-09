@@ -1,6 +1,6 @@
 
-import { User, UserLoginInfo } from '../Types/User';
-import users from '../Data/Users/users.json';
+import { User, UserLoginInfo } from '../types/user';
+import users from '../data/users/users.json';
 
 const getAallUsers = (): User[] => {
     return users.map((user: any) => {
@@ -18,6 +18,7 @@ const getUserIfExist = (userInfo: UserLoginInfo): User | undefined => {
     );
     return existedUser ? existedUser : undefined;
 }
+
 export const UsersService = {
     getAallUsers, getUserIfExist
 }

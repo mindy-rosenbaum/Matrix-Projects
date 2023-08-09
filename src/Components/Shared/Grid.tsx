@@ -3,10 +3,10 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import { ColDef, ColumnApi, GridApi } from 'ag-grid-community';
 
-import { CommonService } from '../../Services/CommonService';
-import { LogStatus } from '../../Types/enums';
-import { Strings } from '../../Const';
-import { ProjectHeader } from '../../Types/Project';
+import { CommonService } from '../../services/common-service';
+import { LogStatus } from '../../types/enums';
+import { Translation } from '../../translation';
+import { ProjectHeader } from '../../types/project';
 
 
 export interface GridProps {
@@ -26,7 +26,7 @@ const Grid = (props: GridProps) => {
         }
     }
     const onGridReady = (params: any): void => {
-        CommonService.log(Strings.massages.GRID_READY, LogStatus.info,)
+        CommonService.log(Translation.massages.GRID_READY, LogStatus.INFO,)
         gridApi = params.api;
         gridColumnApi = params.columnApi;
         gridApi.sizeColumnsToFit();

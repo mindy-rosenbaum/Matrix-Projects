@@ -1,5 +1,6 @@
 import React from 'react';
-import { ActiveUserInfo, User } from '../Types/User';
+
+import { ActiveUserInfo, User } from '../types/user';
 
 const initValue: ActiveUserInfo = {
     user: null,

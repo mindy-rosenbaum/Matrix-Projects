@@ -2,13 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Typography, Container, Box } from '@mui/material';
 
-import { useActiveUserAuth } from './AuthContext';
-import AlertMessage from './Shared/AlertMessage';
-import { AlertSeverity, LogStatus } from '../Types/enums';
-import { UsersService } from '../Services/UsersService';
-import { CommonService } from '../Services/CommonService';
-import { User, UserLoginInfo } from '../Types/User';
-import { Strings } from '../Const';
+import { useActiveUserAuth } from './auth-context';
+import AlertMessage from './shared/alert-message';
+import { AlertSeverity, LogStatus } from '../types/enums';
+import { UsersService } from '../services/users-service';
+import { CommonService } from '../services/common-service';
+import { User, UserLoginInfo } from '../types/user';
+import { Strings } from '../consts';
+import { Translation } from '../translation';
+
+
+interface AlertViewInfo {
+    isOpen: boolean,
+    massage: string,
+    severity: AlertSeverity
+}
 
 const Login = (): JSX.Element => {
     const [formData, setFormData] = useState<UserLoginInfo>({
@@ -21,13 +29,7 @@ const Login = (): JSX.Element => {
         password: '',
     });
 
-    //todo- alert data objecct that contains all data of alert.
-    //interface
-    const [openAlert, setOpenAlert] = useState(false);
-    const [alertMessage, setAlertMessage] = useState('');
-    const [alertSeverity, setAlertSeverity] = useState<AlertSeverity>(
-        AlertSeverity.SUCCESS
-    );
+    const [alertInfo, setAlertInfo] = useState<AlertViewInfo>({ isOpen: false, massage: '', severity: AlertSeverity.SUCCESS });
 
     const navigate = useNavigate();
 
@@ -60,11 +62,14 @@ const Login = (): JSX.Element => {
     };
 
     const handleCloseAlert = () => {
-        setOpenAlert(prevOpenAlert => !prevOpenAlert);//to false
-        if (alertSeverity === AlertSeverity.SUCCESS) {
-            // Navigate to the main screen - projects table page after successful login
+        setAlertInfo((prevAlertInfo) => ({
+            ...prevAlertInfo,
+            isOpen: false,
+        }));
+        if (alertInfo.severity === AlertSeverity.SUCCESS) {
+            // Navigate to projects table page after successfull login
             navigate('/mainScreen');
-            CommonService.log(Strings.massages.LOG_IN_SUCCESSFULL, LogStatus.info)
+            CommonService.log(Translation.massages.LOG_IN_SUCCESSFULL, LogStatus.INFO)
         }
     };
 
@@ -78,37 +83,32 @@ const Login = (): JSX.Element => {
 
             const existedUser = UsersService.getUserIfExist(formData)
             if (existedUser) {
-                setAlertSeverity(AlertSeverity.SUCCESS);
-                setAlertMessage(Strings.massages.LOG_IN_SUCCESSFULL);
-                setOpenAlert(prevOpenAlert => !prevOpenAlert);//to true
+                setAlertInfo({ isOpen: true, massage: Translation.massages.LOG_IN_SUCCESSFULL, severity: AlertSeverity.SUCCESS });
                 login(existedUser);
             } else {
-                setAlertSeverity(AlertSeverity.ERROR);
-                setAlertMessage(Strings.massages.INVALID_USER_NAME_OR_PASSWORD);
-                setOpenAlert(prevOpenAlert => !prevOpenAlert);//to true
+                setAlertInfo({ isOpen: true, massage: Translation.massages.INVALID_USER_NAME_OR_PASSWORD, severity: AlertSeverity.ERROR });
             }
         }
     };
 
-
     const validateField = (fieldName: string, value: string) => {
         const currentErrors: { name: string; password: string } = { ...errors };
 
-        if (fieldName === Strings.fieldNames.NAME) {
+        if (fieldName === Translation.fieldNames.NAME) {
             if (!value.trim()) {
-                currentErrors.name = Strings.massages.USER_NAME_REQUIRED;
+                currentErrors.name = Translation.massages.USER_NAME_REQUIRED;
             } else if (value.length < 4) {
-                currentErrors.name = Strings.massages.USER_NAME_MUST_BE_LONG;
+                currentErrors.name = Translation.massages.USER_NAME_MUST_BE_LONG;
             } else {
                 currentErrors.name = '';
             }
         }
 
-        if (fieldName === Strings.fieldNames.PASSWORD) {
+        if (fieldName === Translation.fieldNames.PASSWORD) {
             if (!value.trim()) {
-                currentErrors.password = Strings.massages.PASSWORD_REQUIRED;
+                currentErrors.password = Translation.massages.PASSWORD_REQUIRED;
             } else if (value.length < 6) {
-                currentErrors.password = Strings.massages.PASSWORD_MUST_BE_LONG;
+                currentErrors.password = Translation.massages.PASSWORD_MUST_BE_LONG;
             } else {
                 currentErrors.password = '';
             }
@@ -118,7 +118,7 @@ const Login = (): JSX.Element => {
     };
 
     const validateForm = (user: UserLoginInfo) => {
-        return validateField(Strings.fieldNames.NAME, user.name);
+        return validateField(Translation.fieldNames.NAME, user.name);
     };
 
     return (
@@ -126,7 +126,7 @@ const Login = (): JSX.Element => {
             <Box mt={4}>
                 <form onSubmit={handleSubmit}>
                     <Typography variant="h5" component="h2" gutterBottom>
-                        Login
+                        {Translation.titles.LOGIN}
                     </Typography>
                     <TextField
                         fullWidth
@@ -150,14 +150,14 @@ const Login = (): JSX.Element => {
                         helperText={errors.password || ' '}
                     />
                     <Button variant="contained" color="primary" type="submit" sx={{ mt: 2 }}>
-                        Login
+                        {Translation.titles.LOGIN}
                     </Button>
                 </form>
             </Box>
             <AlertMessage
-                open={openAlert}
-                severity={alertSeverity}
-                message={alertMessage}
+                isOpen={alertInfo.isOpen}
+                severity={alertInfo.severity}
+                message={alertInfo.massage}
                 onClose={handleCloseAlert}
             />
         </Container>

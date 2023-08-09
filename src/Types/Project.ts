@@ -1,4 +1,4 @@
-import { Status } from "./enums";
+import { Status } from './enums';
 
 export class Project {
     id: string;
@@ -24,4 +24,5 @@ export class Project {
         this.isEmbeeddedSW = isEmbeeddedSW;
     }
 }
+
 export type ProjectHeader = Pick<Project, "name" | "customerCompany" | 'status' | 'id'>;
